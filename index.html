@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Todo app</title>
+  </head>
+  <body>
+    <main>
+      <header class="app app_header">Todo</header>
+      <div class="app app_form">
+        <div class="plus">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="plus_icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <form action="" class="app_form--form">
+          <input
+            type="text"
+            name="newTodo"
+            id="newTodo"
+            placeholder="Create a new todo..."
+            required
+          />
+        </form>
+      </div>
+      <div class="app app_table">
+        <div class="app_list"></div>
+        <div class="app_options">
+          <div class="items_left">5 items left</div>
+          <div class="sort_list">
+            <span class="sort_items sort_by_all sort_by_this_option">All</span>
+            <span class="sort_items sort_by_active">Active</span>
+            <span class="sort_items sort_by_completed">Completed</span>
+          </div>
+          <div class="clear">Clear completed</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!-- 
+  Do naprawy:
+  1. dynamicznie zmieniająca się liczba zadań do skończenia
+
+  2. Błąd w konsoli przy kliknięciu w tekst tasku.
+
+  3. Naprawić formularz aby przy wybieraniu z podpowiedzi nie podświetlał się na niebiesko.
+
+  4.RWD
+
+  5. dark theme
+
+  6. local storage
+
+  7. CV + github + netlify
+ 
+
+
+  
+ -->

@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('images/bg-desktop-light.jpg');
+  background-size: 100vw 40vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+main {
+  width: 55rem;
+  margin: 5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.app {
+  width: 100%;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.app_header {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  height: 7rem;
+}
+
+/* Create new todo form */
+.app_form {
+  background-color: #fff;
+  min-height: 6.2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+
+#newTodo {
+  height: 4rem;
+  width: 45rem;
+  font-size: 2rem;
+  border: none;
+  text-decoration: none;
+}
+
+#newTodo::placeholder {
+  font-family: Josefin Sans;
+  color: hsl(236, 9%, 61%);
+}
+
+#newTodo:focus-visible {
+  outline: none;
+}
+
+.plus {
+  display: flex;
+  align-items: center;
+}
+
+.plus_icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: green;
+}
+
+.plus_icon:hover {
+  cursor: pointer;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #e4e5f1;
+}
+
+.circle:hover {
+  cursor: pointer;
+}
+
+.circle-completed {
+  border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-completed:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Todos list iteams */
+.app_table {
+  background-color: #fff;
+  height: 47rem;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.app_list {
+  display: flex;
+  flex-direction: column;
+  height: 42rem;
+  overflow-y: auto;
+}
+
+.app_list--item {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+
+.item--text {
+  display: flex;
+  align-items: center;
+}
+
+.app_list--item[data-status='completed'] .item--text {
+  color: hsl(233, 11%, 84%);
+  text-decoration: line-through;
+  text-decoration-color: hsl(236, 9%, 61%);
+}
+
+/* .item--text-completed {
+  color: hsl(233, 11%, 84%);
+  text-decoration: line-through;
+  text-decoration-color: hsl(236, 9%, 61%);
+} */
+
+/* Option bar */
+.app_options {
+  height: 5rem;
+  border-top: 1px solid hsl(236, 9%, 61%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 16px;
+  color: hsl(236, 9%, 61%);
+}
+
+.sort_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.sort_items:hover {
+  color: hsl(220, 98%, 61%);
+  cursor: pointer;
+}
+
+.sort_by_this_option {
+  color: hsl(220, 98%, 61%);
+}
+
+.clear:hover {
+  color: #37b24d;
+  cursor: pointer;
+}
