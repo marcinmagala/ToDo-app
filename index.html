@@ -50,13 +50,14 @@
             id="newTodo"
             placeholder="Create a new todo..."
             required
+            autocomplete="off"
           />
         </form>
       </div>
       <div class="app app_table">
         <div class="app_list"></div>
         <div class="app_options">
-          <div class="items_left">5 items left</div>
+          <div class="items_left"><p class="lefts">0 item left</p></div>
           <div class="sort_list">
             <span class="sort_items sort_by_all sort_by_this_option">All</span>
             <span class="sort_items sort_by_active">Active</span>
@@ -71,19 +72,21 @@
 
 <!-- 
   Do naprawy:
-  1. dynamicznie zmieniająca się liczba zadań do skończenia
+  1. Pomysł: Jeśli jest włączony widok sortowania inny niż ALL to lista powinna zostać w tym widoku nawet podczas zmiany statusu danego zadania, a nie zmieniać widok na domyślne sortowanie ALL. Próby działania z tym pomysłem są zakomentowane w script.js.
 
-  2. Błąd w konsoli przy kliknięciu w tekst tasku.
+  
 
-  3. Naprawić formularz aby przy wybieraniu z podpowiedzi nie podświetlał się na niebiesko.
+  
 
   4.RWD
 
-  5. dark theme
+  
 
   6. local storage
 
   7. CV + github + netlify
+
+ 
  
 
 
