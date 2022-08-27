@@ -1,0 +1,39 @@
+@media (max-width: 35em) {
+  body {
+    background-image: url('images/bg-mobile-light.jpg');
+  }
+
+  main {
+    width: 40rem;
+  }
+
+  #newTodo {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 27em) {
+  body {
+    max-height: 100vh;
+  }
+  main {
+    width: 98%;
+  }
+
+  .app {
+    width: 98%;
+  }
+
+  #newTodo {
+    width: 94%;
+  }
+
+  .app_options {
+    height: 8rem;
+  }
+
+  .sort_list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

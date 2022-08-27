@@ -80,8 +80,8 @@ input {
 }
 
 .plus_icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
   stroke: green;
 }
 
@@ -153,12 +153,6 @@ input {
   text-decoration: line-through;
   text-decoration-color: hsl(236, 9%, 61%);
 }
-
-/* .item--text-completed {
-  color: hsl(233, 11%, 84%);
-  text-decoration: line-through;
-  text-decoration-color: hsl(236, 9%, 61%);
-} */
 
 /* Option bar */
 .app_options {
