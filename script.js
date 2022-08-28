@@ -93,7 +93,7 @@ class App {
   _renderLeftItems(task) {
     let leftTask = task.filter(item => item.status === 'activ');
     let leftItems = `<p class="lefts">${leftTask.length} ${
-      leftTask.length === 1 || leftTask.length === 0 ? 'item' : 'items'
+      leftTask.length === 1 || leftTask.length === 0 ? 'task' : 'tasks'
     } left</p>`;
 
     itemsLeft.insertAdjacentHTML('afterbegin', leftItems);
