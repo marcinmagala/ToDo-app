@@ -29,6 +29,10 @@ class App {
   #sortCompletedStatus = false;
 
   constructor() {
+    // Get data from local storage
+    this._getLocalStorage();
+
+    // Event handlers
     addBtn.addEventListener('click', this._newTask.bind(this));
     form.addEventListener('submit', this._newTask.bind(this));
     appList.addEventListener('click', this._taskStatusChanged.bind(this));
@@ -273,12 +277,32 @@ class App {
     sortByCompletedBtn.classList.remove('sort_by_this_option');
 
     this._renderTask(tasks);
+    this._setLocalStorage();
   }
 
   _updateTasksLeft(tasks) {
     const lefts = document.querySelector('.lefts');
     lefts.remove();
     this._renderLeftItems(tasks);
+  }
+
+  _setLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(this.#tasks));
+  }
+
+  _getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem('tasks'));
+
+    if (!data) return;
+
+    this.#tasks = data;
+    this._updateList(this.#tasks);
+    this._updateTasksLeft(this.#tasks);
+  }
+
+  reset() {
+    localStorage.removeItem('tasks');
+    location.reload();
   }
 }
 
