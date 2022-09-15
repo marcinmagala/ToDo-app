@@ -115,26 +115,7 @@ class App {
           task => task.id === e.target.closest('.app_form').dataset.id
         ).status = 'completed';
         console.log(this.#tasks);
-        // console.log(this.#tasks);
 
-        // Blokada zmiany widoku listy jeśli jest posortowana
-        // if (
-        //   this.#sortCompletedStatus === false &&
-        //   this.#sortActiveStatus === false
-        // ) {
-        //   this._updateList(this.#tasks);
-        // } else if (
-        //   this.#sortCompletedStatus === true &&
-        //   this.#sortActiveStatus === false
-        // ) {
-        //   this._updateList(this.#sortByCompleted);
-        // } else if (
-        //   this.#sortCompletedStatus === false &&
-        //   this.#sortActiveStatus === true
-        // ) {
-        //   this._updateList(this.#sortByActive);
-
-        // }
         this._updateList(this.#tasks);
         this._updateTasksLeft(this.#tasks);
         //
@@ -155,23 +136,6 @@ class App {
             task => task.id === e.target.closest('.app_form').dataset.id
           ).status = 'activ';
 
-          // Blokada zmiany widoku listy jeśli jest posortowana
-          // if (
-          //   this.#sortCompletedStatus === false &&
-          //   this.#sortActiveStatus === false
-          // ) {
-          //   this._updateList(this.#tasks);
-          // } else if (
-          //   this.#sortCompletedStatus === true &&
-          //   this.#sortActiveStatus === false
-          // ) {
-          //   this._updateList(this.#sortByCompleted);
-          // } else if (
-          //   this.#sortCompletedStatus === false &&
-          //   this.#sortActiveStatus === true
-          // ) {
-          //   this._updateList(this.#sortByActive);
-          // }
           this._updateList(this.#tasks);
           this._updateTasksLeft(this.#tasks);
         }
@@ -188,23 +152,7 @@ class App {
           this.#tasks.find(
             task => task.id === e.target.closest('.app_form').dataset.id
           ).status = 'activ';
-          // Blokada zmiany widoku listy jeśli jest posortowana
-          // if (
-          //   this.#sortCompletedStatus === false &&
-          //   this.#sortActiveStatus === false
-          // ) {
-          //   this._updateList(this.#tasks);
-          // } else if (
-          //   this.#sortCompletedStatus === true &&
-          //   this.#sortActiveStatus === false
-          // ) {
-          //   this._updateList(this.#sortByCompleted);
-          // } else if (
-          //   this.#sortCompletedStatus === false &&
-          //   this.#sortActiveStatus === true
-          // ) {
-          //   this._updateList(this.#sortByActive);
-          // }
+
           this._updateList(this.#tasks);
           this._updateTasksLeft(this.#tasks);
         }
